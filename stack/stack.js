@@ -10,11 +10,11 @@ class Stack {
         this.stack.pop()
     }
     isEmpty(){
-        return this.stack.length()==null
+        return this.stack.length===0
     }
 
     peek(){
-        return this.stack[this.stack.length()-1];
+        return this.stack[this.stack.length-1];
     }
 
     printStack(){
