@@ -7,6 +7,9 @@ class Stack {
     }
 
     pop(){
+        if (this.isEmpty()) {
+            return "stack is empty"
+        }
         this.stack.pop()
     }
     isEmpty(){
@@ -45,9 +48,14 @@ class Stack {
 
 let mystack = new Stack()
 
-mystack.push(3)
-mystack.push(4)
-mystack.push(6)
-mystack.push(31)
-mystack.pop()
-console.log(mystack.printStack());
+// mystack.push(3)
+// mystack.push(4)
+// mystack.push(6)
+// mystack.push(31)
+// mystack.push(34)
+// mystack.push(126)
+// mystack.push(331)
+console.log(mystack.pop());
+
+
+// console.log(mystack.printStack());
