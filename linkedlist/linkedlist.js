@@ -27,3 +27,31 @@ Linkedlist.prototype.insertAtEnd = function (data) {
     }
     last.next= newNode
 }
+
+Linkedlist.prototype.insertAt = function (data, previousNode) {
+    if (!previousNode) {
+        console.log("previous node is required");
+        return
+    }
+    const newNode = new Node(data,previousNode.next)
+    previousNode.next = newNode
+}
+
+Linkedlist.prototype.deleteFirstNode = function () {
+    if (!this.head) {
+        return
+    }
+    this.head = this.head.next
+}
+
+Linkedlist.prototype.deleteLastNode = function () {
+    if(!this.head){
+        return
+    }
+    let last = this.head
+
+    while(last.next.next){
+        last = last.next
+    }
+    last.next = null
+}
